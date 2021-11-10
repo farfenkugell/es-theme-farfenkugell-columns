@@ -81,6 +81,14 @@
          <size>0.34 1</size>
          <zIndex>12</zIndex>
       </image>
+	   <image name="listlogo" extra="true">
+         <path>./assets/logos/${system.theme}.png</path>
+         <color>606060FF</color>
+         <origin>0 0</origin>
+         <pos>0.02 0</pos>
+         <size>0.2 0.2</size>
+         <zIndex>12</zIndex>
+      </image>
       <image name="md_image">
          <visible>false</visible>
       </image>
