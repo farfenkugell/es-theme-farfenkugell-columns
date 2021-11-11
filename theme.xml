@@ -118,7 +118,7 @@
       <text name="md_description">
          <pos>0.68 0.678</pos>
          <size>0.30 0.20</size>
-         <fontSize>0.035</fontSize>
+         <fontSize>0.039</fontSize>
          <color>A0A0B0</color>
       </text>
       <text name="md_rating">
