@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<theme defaultView="Boxes">
+<theme defaultView="grid">
     <formatVersion>7</formatVersion>
     <feature supported="carousel">
 	
-   <view name="system">
+	<view name="system">
       <carousel name="systemcarousel">
         <type>horizontal</type>
         <pos>0.0 0.0</pos>
         <size>1 1</size>
-        <logoScale>1.025</logoScale>
+        <logoScale>1.01</logoScale>
          <zIndex>41</zIndex>          
         <logoSize>0.95 0.95</logoSize>
         <color>00000000</color>
@@ -60,11 +60,7 @@
          <glowColor>${glowColor}</glowColor>
          <glowSize>10</glowSize>
       </text>
-   </view>
-  
 
-    
-   <customView name="Boxes" inherits="grid" displayName="${basicGridDetailsName}">
       <imagegrid name="gamegrid">
          <pos>0 0.16</pos>
          <size>0.66 0.774</size>
@@ -129,10 +125,5 @@
          <pos>0.9 0.886</pos>
          <size>0.05 0.03</size>
       </text>
-   </customView>
- 
- 
- 
- 
-  
+   </view>
 </theme>
