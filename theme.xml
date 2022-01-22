@@ -2,7 +2,33 @@
 
 <theme defaultView="grid">
     <formatVersion>7</formatVersion>
-    <feature supported="carousel">
+    <feature supported="carousel">	
+		<view name="screen">
+		<!-- Clock -->
+		<text name="clock">
+			<origin>0 0</origin>
+			<pos>0.94 0.013</pos>
+			<size>0.1666666666666667 0.03125</size>
+			<fontSize>0.035</fontSize>
+			<alignment>left</alignment>
+			<verticalAlignment>center</verticalAlignment>
+			<fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
+			<color>ffffff</color>
+		</text>
+		<!-- Battery -->
+		<batteryIndicator name="batteryIndicator">
+			<pos>0.78 0.013</pos> <!-- x=439.2 y=4.16 -->
+			<size>0.07 0.07</size> <!-- 33.6 x 22.4 -->
+			<full>./assets/miscbattery-100.svg</full>
+			<at75>./assets/miscbattery-75.svg</at75>
+			<at50>./assets/miscbattery-50.svg</at50>
+			<at25>./assets/miscbattery-25.svg</at25>
+			<empty>./assets/miscbattery-0.svg</empty>
+			<incharge>./assets/miscbattery-charging.svg</incharge>
+			<networkIcon>./assets/wifi.svg</networkIcon>
+			<color>ffffff</color>
+		</batteryIndicator>
+	</view>
 	
 	<view name="system">
       <carousel name="systemcarousel">
