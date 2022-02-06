@@ -4,7 +4,6 @@
     <formatVersion>7</formatVersion>
     <feature supported="carousel">	
 		<view name="screen">
-		<!-- Clock -->
 		<text name="clock">
 			<origin>0 0</origin>
 			<pos>0.94 0.013</pos>
@@ -15,10 +14,9 @@
 			<fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
 			<color>ffffff</color>
 		</text>
-		<!-- Battery -->
 		<batteryIndicator name="batteryIndicator">
-			<pos>0.78 0.013</pos> <!-- x=439.2 y=4.16 -->
-			<size>0.07 0.07</size> <!-- 33.6 x 22.4 -->
+			<pos>0.78 0.013</pos>
+			<size>0.07 0.07</size>
 			<full>./assets/miscbattery-100.svg</full>
 			<at75>./assets/miscbattery-75.svg</at75>
 			<at50>./assets/miscbattery-50.svg</at50>
