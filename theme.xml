@@ -1,153 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
 <theme defaultView="grid">
     <formatVersion>7</formatVersion>
-    <feature supported="carousel">	
-		<view name="screen">
-		<text name="clock">
-			<origin>0 0</origin>
-			<pos>0.94 0.013</pos>
-			<size>0.1666666666666667 0.03125</size>
-			<fontSize>0.035</fontSize>
-			<alignment>left</alignment>
-			<verticalAlignment>center</verticalAlignment>
-			<fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
-			<color>ffffff</color>
-		</text>
-		<batteryIndicator name="batteryIndicator">
-			<pos>0.78 0.013</pos>
-			<size>0.07 0.07</size>
-			<full>./assets/miscbattery-100.svg</full>
-			<at75>./assets/miscbattery-75.svg</at75>
-			<at50>./assets/miscbattery-50.svg</at50>
-			<at25>./assets/miscbattery-25.svg</at25>
-			<empty>./assets/miscbattery-0.svg</empty>
-			<incharge>./assets/miscbattery-charging.svg</incharge>
-			<networkIcon>./assets/wifi.svg</networkIcon>
-			<color>ffffff</color>
-		</batteryIndicator>
-	</view>
 	
-	<view name="system">
-      <carousel name="systemcarousel">
-        <type>horizontal</type>
-        <pos>0.0 0.0</pos>
-        <size>1 1</size>
-        <logoScale>1.01</logoScale>
-         <zIndex>41</zIndex>          
-        <logoSize>0.95 0.95</logoSize>
-        <color>00000000</color>
-        <maxLogoCount>5</maxLogoCount>
-      </carousel>
-    <image name="logo">
-      <pos>0.905 0.020</pos>
-      <maxSize>0.200 0.220</maxSize>
-      <path>./assets/system/${system.theme}.png</path>
-    </image>	  
-      <text name="systemInfo">
-         <zIndex>44</zIndex>       
-         <pos>0.35 0.92</pos>
-         <backgroundColor>00000000</backgroundColor>
-         <color>ffffff</color>
-         <fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
-	     <fontSize>0.040</fontSize>
-         <zIndex>44</zIndex>	     
-      </text>     
-      <helpsystem name="help">
-         <fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
-         <fontSize>0.015</fontSize>     
-         <pos>0.015 0.98</pos>      
-         <textColor>ff0000</textColor>
-         <iconColor>ff0000</iconColor>
-      </helpsystem>	  
-   </view>
-    </feature>
-  
-   <view name="grid">
-      <gridtile name="default">
-         <backgroundColor>FFFFFF00</backgroundColor>
-         <backgroundCornerSize>9 9</backgroundCornerSize>
-         <selectionMode>image</selectionMode>
-         <padding>5 5</padding>
-         <imageColor>FFFFFFB0</imageColor>
-      </gridtile>
-      <gridtile name="selected">
-         <backgroundCenterColor>${centerFadeColor}</backgroundCenterColor>
-         <backgroundEdgeColor>${bottomBarColor}</backgroundEdgeColor>
-         <imageColor>FFFFFFFF</imageColor>
-      </gridtile>
-       <text name="gridtile">
-         <visible>false</visible>
-      </text>
-      <text name="gridtile_selected">
-         <color>FFFFFF</color>
-         <glowColor>${glowColor}</glowColor>
-         <glowSize>10</glowSize>
-      </text>
+<variables>
+    <fullscreenfixSubsetname>Emulationstation Screen Size</fullscreenfixSubsetname>
+</variables>
 
-      <imagegrid name="gamegrid">
-         <pos>0 0.16</pos>
-         <size>0.66 0.774</size>
-         <autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
-         <autoLayout>4 2</autoLayout>
-		 <margin>0.005 0.010</margin>
-         <padding>0.03 0.05 0.03 0.04</padding>  
-      </imagegrid>
-      <image name="gamelistBackground" extra="true">
-         <path>./assets/filter.png</path>
-         <color>606060FF</color>
-         <origin>0 0</origin>
-         <pos>0.66 0</pos>
-         <size>0.34 1</size>
-         <zIndex>12</zIndex>
-      </image>
-	   <image name="listlogo" extra="true">
-         <path>./assets/logos/${system.theme}.png</path>
-         <color>606060FF</color>
-         <origin>0 0</origin>
-         <pos>0.02 0</pos>
-         <size>0.2 0.2</size>
-         <zIndex>12</zIndex>
-      </image>
-      <image name="md_image">
-         <visible>false</visible>
-      </image>
-      <text name="md_name">
-         <color>ffffffff</color>
-         <pos>0.2 0.1</pos>
-         <size>0.80 0.03</size>
-         <color>F0F0F0</color>
-         <fontSize>0.07</fontSize>
-         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
-         <alignment>center</alignment>
-         <glowColor>${glowColor}</glowColor>
-         <glowSize>2</glowSize>
-      </text>
-      <text name="md_developer">
-         <color>EFEFFF</color>
-         <pos>0.68 0.875</pos>
-         <size>0.30 0.05</size>
-         <alignment>left</alignment>
-         <fontSize>0.035</fontSize>
-      </text>
-      <video name="md_video">
-         <pos>0.83 0.455</pos>
-         <minSize>0.29 0.39</minSize>
-         <origin>0.5 0.5</origin>
-         <delay>1</delay>
-         <showSnapshotNoVideo>true</showSnapshotNoVideo>
-         <showSnapshotDelay>true</showSnapshotDelay>
-      </video>
+<subset name="fullscreenfix" displayName="${fullscreenfixSubsetname}">
+        <include name="3:2">./assets/xml/32.xml</include>
+        <include name="4:3">./assets/xml/43.xml</include>
+        <include name="16:9">./assets/xml/169.xml</include>
+</subset>
 
-      <text name="md_description">
-         <pos>0.68 0.678</pos>
-         <size>0.30 0.20</size>
-         <fontSize>0.039</fontSize>
-         <color>A0A0B0</color>
-      </text>
-      <text name="md_rating">
-         <pos>0.9 0.886</pos>
-         <size>0.05 0.03</size>
-      </text>
+   <view name="menu">
+      <menuText name="menufooter">
+         <fontPath>./fonts/Homizio.ttf</fontPath>
+         <fontSize>0.025</fontSize>
+      </menuText>
+      <menuText name="menutext">
+         <fontPath>./assets/fonts/GROBOLDttf</fontPath>
+         <fontSize>0.04</fontSize>
+       </menuText>
+      <menuTextSmall name="menutextsmall">
+         <fontPath>./assets/fonts/GROBOLDttf</fontPath>
+         <fontSize>0.03</fontSize>
+      </menuTextSmall>
+      <menuText name="menutitle">
+         <fontPath>./assets/fonts/GROBOLDttf</fontPath>
+         <fontSize>0.04</fontSize>
+      </menuText>
    </view>
+
 </theme>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme defaultView="grid">
+    <formatVersion>7</formatVersion>
+	
+	<!--Carousel Settings-->
+    <feature supported="carousel">	
+	
+	<view name="screen">
+	
+	<!-- Clock -->	
+	<text name="clock">
+			<pos>0 0.010</pos>
+			<size>0.4 0.07</size>
+			<fontSize>0.04</fontSize>
+			<alignment>left</alignment>
+			<verticalAlignment>center</verticalAlignment>
+			<fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
+			<color>ffffff</color>
+		</text>
+	</view>
+	<!-- Clock end-->	
+	
+	<!-- Battery-->
+	<batteryIndicator name="batteryIndicator">
+			<pos>0.85 0.010</pos>
+			<size>0.4 0.039</size>
+			<full>./assets/miscbattery-100.svg</full>
+			<at75>./assets/miscbattery-75.svg</at75>
+			<at50>./assets/miscbattery-50.svg</at50>
+			<at25>./assets/miscbattery-25.svg</at25>
+			<empty>./assets/miscbattery-0.svg</empty>
+			<incharge>./assets/miscbattery-charging.svg</incharge>
+			<networkIcon>./assets/wifi.svg</networkIcon>
+			<color>ffffff</color>
+	</batteryIndicator>
+	<!-- Battery end-->
+	
+	<view name="system">
+      <carousel name="systemcarousel">
+        <type>horizontal</type>
+        <pos>0.0 0.02</pos>
+        <size>1 1</size>
+        <logoScale>1</logoScale>
+         <zIndex>41</zIndex>          
+        <logoSize>0.9</logoSize>
+        <color>071e26</color>
+        <maxLogoCount>6</maxLogoCount>
+      </carousel>
+    <image name="logo">
+      <path>./assets/system/${system.theme}.png</path>
+    </image>	  
+      <text name="systemInfo">
+         <zIndex>44</zIndex>       
+         <pos>0.0 0.015</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>ffffff</color>
+         <fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
+	     <fontSize>0.04</fontSize>
+         <zIndex>44</zIndex>	     
+      </text>     
+	  <helpsystem name="help">
+		<origin>-9 1</origin>
+	   </helpsystem>
+      </view>
+    </feature>
+  
+   <view name="grid">
+      <gridtile name="default">
+         <backgroundColor>FFFFFF00</backgroundColor>
+         <backgroundCornerSize>9 9</backgroundCornerSize>
+         <selectionMode>image</selectionMode>
+         <padding>5 5</padding>
+         <imageColor>FFFFFFB0</imageColor>
+      </gridtile>
+      <gridtile name="selected">
+         <backgroundCenterColor>${centerFadeColor}</backgroundCenterColor>
+         <backgroundEdgeColor>${bottomBarColor}</backgroundEdgeColor>
+         <imageColor>FFFFFFFF</imageColor>
+      </gridtile>
+       <text name="gridtile">
+         <visible>false</visible>
+      </text>
+      <text name="gridtile_selected">
+         <color>FFFFFF</color>
+         <glowColor>${glowColor}</glowColor>
+         <glowSize>10</glowSize>
+      </text>
+
+      <imagegrid name="gamegrid">
+         <pos>0 0.16</pos>
+         <size>0.66 0.774</size>
+         <autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
+         <autoLayout>4 2</autoLayout>
+		 <margin>0.005 0.010</margin>
+         <padding>0.03 0.05 0.03 0.04</padding>  
+      </imagegrid>
+      <image name="gamelistBackground" extra="true">
+         <path>./assets/filter.png</path>
+         <color>606060FF</color>
+         <origin>0 0</origin>
+         <pos>0.66 0</pos>
+         <size>0.34 1</size>
+         <zIndex>12</zIndex>
+      </image>
+	   <image name="listlogo" extra="true">
+         <path>./assets/logos/${system.theme}.png</path>
+         <color>606060FF</color>
+         <origin>0 0</origin>
+         <pos>0.09 0</pos>
+         <size>0.2 0.2</size>
+         <zIndex>12</zIndex>
+      </image>
+      <image name="md_image">
+         <visible>false</visible>
+      </image>
+      <text name="md_name">
+         <color>ffffffff</color>
+         <pos>0.2 0.1</pos>
+         <size>0.80 0.03</size>
+         <color>F0F0F0</color>
+         <fontSize>0.05</fontSize>
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <alignment>Left</alignment>
+         <glowColor>${glowColor}</glowColor>
+         <glowSize>3</glowSize>
+      </text>
+      <text name="md_developer">
+         <color>EFEFFF</color>
+         <pos>0.68 0.875</pos>
+         <size>0.30 0.05</size>
+         <alignment>left</alignment>
+         <fontSize>0.035</fontSize>
+      </text>
+      <video name="md_video">
+         <pos>0.83 0.455</pos>
+         <minSize>0.29 0.39</minSize>
+         <origin>0.5 0.5</origin>
+         <delay>1</delay>
+         <showSnapshotNoVideo>true</showSnapshotNoVideo>
+         <showSnapshotDelay>true</showSnapshotDelay>
+      </video>
+
+      <text name="md_description">
+         <pos>0.68 0.678</pos>
+         <size>0.30 0.20</size>
+         <fontSize>0.039</fontSize>
+         <color>A0A0B0</color>
+      </text>
+      <text name="md_rating">
+         <pos>0.9 0.886</pos>
+         <size>0.05 0.03</size>
+      </text>
+   </view>
+</theme>
