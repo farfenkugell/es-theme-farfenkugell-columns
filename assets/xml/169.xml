@@ -2,29 +2,21 @@
 
 <theme defaultView="grid">
     <formatVersion>7</formatVersion>
-	
-	<!--Carousel Settings-->
     <feature supported="carousel">	
-	
-	<view name="screen">
-	
-	<!-- Clock -->	
-	<text name="clock">
-			<pos>0 0.010</pos>
-			<size>0.4 0.07</size>
-			<fontSize>0.04</fontSize>
+		<view name="screen">
+		<text name="clock">
+			<origin>0 0</origin>
+			<pos>0.94 0.013</pos>
+			<size>0.1666666666666667 0.03125</size>
+			<fontSize>0.035</fontSize>
 			<alignment>left</alignment>
 			<verticalAlignment>center</verticalAlignment>
 			<fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
 			<color>ffffff</color>
 		</text>
-	</view>
-	<!-- Clock end-->	
-	
-	<!-- Battery-->
-	<batteryIndicator name="batteryIndicator">
-			<pos>0.85 0.010</pos>
-			<size>0.4 0.039</size>
+		<batteryIndicator name="batteryIndicator">
+			<pos>0.78 0.013</pos>
+			<size>0.07 0.07</size>
 			<full>./assets/miscbattery-100.svg</full>
 			<at75>./assets/miscbattery-75.svg</at75>
 			<at50>./assets/miscbattery-50.svg</at50>
@@ -33,36 +25,42 @@
 			<incharge>./assets/miscbattery-charging.svg</incharge>
 			<networkIcon>./assets/wifi.svg</networkIcon>
 			<color>ffffff</color>
-	</batteryIndicator>
-	<!-- Battery end-->
+		</batteryIndicator>
+	</view>
 	
 	<view name="system">
       <carousel name="systemcarousel">
         <type>horizontal</type>
-        <pos>0.0 0.02</pos>
+        <pos>0.0 0.0</pos>
         <size>1 1</size>
-        <logoScale>1</logoScale>
+        <logoScale>1.01</logoScale>
          <zIndex>41</zIndex>          
-        <logoSize>0.9</logoSize>
-        <color>071e26</color>
-        <maxLogoCount>6</maxLogoCount>
+        <logoSize>0.95 0.95</logoSize>
+        <color>00000000</color>
+        <maxLogoCount>5</maxLogoCount>
       </carousel>
     <image name="logo">
+      <pos>0.905 0.020</pos>
+      <maxSize>0.200 0.220</maxSize>
       <path>./assets/system/${system.theme}.png</path>
     </image>	  
       <text name="systemInfo">
          <zIndex>44</zIndex>       
-         <pos>0.0 0.015</pos>
+         <pos>0.35 0.92</pos>
          <backgroundColor>00000000</backgroundColor>
          <color>ffffff</color>
          <fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
-	     <fontSize>0.04</fontSize>
+	     <fontSize>0.040</fontSize>
          <zIndex>44</zIndex>	     
       </text>     
-	  <helpsystem name="help">
-		<origin>-9 1</origin>
-	   </helpsystem>
-      </view>
+      <helpsystem name="help">
+         <fontPath>./assets/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.015</fontSize>     
+         <pos>0.015 0.98</pos>      
+         <textColor>ff0000</textColor>
+         <iconColor>ff0000</iconColor>
+      </helpsystem>	  
+   </view>
     </feature>
   
    <view name="grid">
@@ -107,7 +105,7 @@
          <path>./assets/logos/${system.theme}.png</path>
          <color>606060FF</color>
          <origin>0 0</origin>
-         <pos>0.09 0</pos>
+         <pos>0.02 0</pos>
          <size>0.2 0.2</size>
          <zIndex>12</zIndex>
       </image>
@@ -119,11 +117,11 @@
          <pos>0.2 0.1</pos>
          <size>0.80 0.03</size>
          <color>F0F0F0</color>
-         <fontSize>0.05</fontSize>
+         <fontSize>0.07</fontSize>
          <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
-         <alignment>Left</alignment>
+         <alignment>center</alignment>
          <glowColor>${glowColor}</glowColor>
-         <glowSize>3</glowSize>
+         <glowSize>2</glowSize>
       </text>
       <text name="md_developer">
          <color>EFEFFF</color>
